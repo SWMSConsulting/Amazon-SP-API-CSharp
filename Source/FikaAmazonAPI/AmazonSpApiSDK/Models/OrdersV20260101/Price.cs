@@ -25,7 +25,7 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.OrdersV20260101
         /// </summary>
         /// <param name="unitPrice">An amount of money, including units in the form of currency.</param>
         /// <param name="priceDesignation">Indicates that the selling price is a special price that is only available for Amazon Business orders. For more information about the Amazon Business Seller Program, refer to the Amazon Business website.</param>
-        public Price(Money unitPrice, PriceDesignationEnum? priceDesignation)
+        public Price(Money unitPrice, string? priceDesignation)
         {
             this.UnitPrice = unitPrice;
             this.PriceDesignation = priceDesignation;
@@ -43,7 +43,7 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.OrdersV20260101
         /// </summary>
         /// <value>Indicates that the selling price is a special price that is only available for Amazon Business orders. For more information about the Amazon Business Seller Program, refer to the Amazon Business website.</value>
         [DataMember(Name = "priceDesignation", EmitDefaultValue = false)]
-        public PriceDesignationEnum? PriceDesignation { get; set; }
+        public string? PriceDesignation { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
